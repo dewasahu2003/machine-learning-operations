@@ -14,7 +14,7 @@ class DataStrategy(ABC):
     def handle_data(self,data:pd.DataFrame)->Union[pd.DataFrame,pd.Series]:
         pass
 
-class DataPreProcessing(DataStrategy):
+class DataPreProcessingStrategy(DataStrategy):
     """
     Strategy for preprocessing Data
     """
@@ -64,3 +64,22 @@ class DataDivideStrategy(DataStrategy):
             logging.error("Error in dividing data:{e}")
             raise e
 
+#final class to make use of above strategy
+
+class DataCleaning:
+    """
+    Class for cleaning data which process the data and divides the data
+    """
+    def __init__(self,data:pd.DataFrame,strategy:DataStrategy) -> None:
+        self.data=data
+        self.strategy=strategy
+    
+    def handle_data(self) ->Union[pd.DataFrame,pd.Series]:
+        """
+        handle data
+        """
+        try:
+            return self.strategy.handle_data(self.data)
+        except Exception as e:
+            logging.error("Error in handling data:{e}")
+            raise e
