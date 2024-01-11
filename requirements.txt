@@ -1,0 +1,8 @@
+zenml[server]
+catboost
+joblib
+lightgbm
+optuna
+xgboost
+markupsafe
+zenml
