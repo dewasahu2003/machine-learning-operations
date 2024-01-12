@@ -1,4 +1,3 @@
-zenml[server]
 catboost
 joblib
 lightgbm
@@ -6,3 +5,5 @@ optuna
 xgboost
 markupsafe
 zenml
+scikit-learn
+zenml[server]==0.54.0zenm
