@@ -3,20 +3,24 @@ import logging
 import pandas as pd
 from zenml import step
 
-from src.data_cleaning import DataCleaning,DataDivideStrategy, DataPreProcessingStrategy
+from src.data_cleaning import (
+    DataCleaning,
+    DataDivideStrategy,
+    DataPreProcessingStrategy,
+)
 
 from typing import Tuple
 from typing_extensions import Annotated
 
 
-
 @step
-def clean_data(df:pd.DataFrame)->Tuple[
-    Annotated[pd.DataFrame,"X_train"],
-    Annotated[pd.DataFrame,"X_test"],
-    Annotated[pd.Series,"y_train"],
-    Annotated[pd.Series,"y_test"],
-
+def clean_data(
+    df: pd.DataFrame,
+) -> Tuple[
+    Annotated[pd.DataFrame, "X_train"],
+    Annotated[pd.DataFrame, "X_test"],
+    Annotated[pd.Series, "y_train"],
+    Annotated[pd.Series, "y_test"],
 ]:
     """
     Cleaning the Raw data
@@ -32,17 +36,14 @@ def clean_data(df:pd.DataFrame)->Tuple[
     """
     try:
         preprocess_strategy = DataPreProcessingStrategy()
-        data_cleaning = DataCleaning(data=df,strategy=preprocess_strategy)
+        data_cleaning = DataCleaning(data=df, strategy=preprocess_strategy)
         processed_data = data_cleaning.handle_data()
 
         divide_strategy = DataDivideStrategy()
-        data_cleaning = DataCleaning(processed_data,divide_strategy)
-
-        X_train,X_test,y_train,y_test = data_cleaning.handle_data()
+        data_cleaning = DataCleaning(processed_data, divide_strategy)
+        X_train, X_test, y_train, y_test = data_cleaning.handle_data()
         logging.info("Data Cleaning Completed")
+        return  X_train, X_test, y_train, y_test
     except Exception as e:
         logging.error(f"Error in cleaning data:{e}")
         raise e
-
-
-
