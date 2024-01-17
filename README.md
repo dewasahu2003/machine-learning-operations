@@ -58,6 +58,14 @@ To run the program:
 make all
 ```
 
+### Stack
+![image](https://github.com/dewasahu2003/machine-learning-operations/assets/95997298/25cb912b-cdc6-443f-9524-1379cbd27b71)
+
+### UI
+![image](https://github.com/dewasahu2003/machine-learning-operations/assets/95997298/69816c1b-13ba-44f2-b66b-d1259319bd9c)
+
+
+
 
 
 See the [open issues](https://github.com/username/rust-project/issues) for a full list of proposed features.
