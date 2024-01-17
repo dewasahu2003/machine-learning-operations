@@ -15,7 +15,6 @@ def train_pipeline(data_path: str):
         data_path: take the path to the data
     """
     data = ingest_data(data_path)
-    X_train, X_test, y_train, y_test=clean_data(data)
-    model = model_train(X_train,y_train)
-    r2, rmse, mse = eval_model(model,X_test,y_test)
-
+    X_train, X_test, y_train, y_test = clean_data(data)
+    model = model_train(X_train, y_train)
+    r2, rmse, mse = eval_model(model, X_test, y_test)

@@ -28,7 +28,7 @@ class LinearRegressionModel(Model):
     Linear Regression Model
     """
 
-    def train(self, X_train, y_train, **kwargs)->RegressorMixin:
+    def train(self, X_train, y_train, **kwargs) -> RegressorMixin:
         """
         Trains the model
         Args:

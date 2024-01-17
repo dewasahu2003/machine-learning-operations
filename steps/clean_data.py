@@ -43,7 +43,7 @@ def clean_data(
         data_cleaning = DataCleaning(processed_data, divide_strategy)
         X_train, X_test, y_train, y_test = data_cleaning.handle_data()
         logging.info("Data Cleaning Completed")
-        return  X_train, X_test, y_train, y_test
+        return X_train, X_test, y_train, y_test
     except Exception as e:
         logging.error(f"Error in cleaning data:{e}")
         raise e
