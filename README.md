@@ -2,12 +2,12 @@
 
 ## Issues that this project helps tackle
 
-1. ****Latency `it gives fast outputs`**   
-    1. ****bcz the trouble begins after deployement ex- 53% user leave a site if it takes 3 sec to load****
-2. ******************Maintaining Fairness  `need to retrain when it crosses undesired matrix`** 
-    1. **********************************************************************************************if the model go wild and we do not know it can create blunders…**********************************************************************************************
-3. ****************Explainibility `make sure that it do not go beyond its boundary matrix`**
-4. ********************************************************************Slow `doing data gathering,training,deployement takes a lot of time`**
+1. **Latency `it gives fast outputs`**   
+    1. **bcz the trouble begins after deployement ex- 53% user leave a site if it takes 3 sec to load**
+2. **Maintaining Fairness  `need to retrain when it crosses undesired matrix`** 
+    1. **if the model go wild and we do not know it can create blunders…**
+3. **Explainibility `make sure that it do not go beyond its boundary matrix`**
+4. **Slow `doing data gathering,training,deployement takes a lot of time`**
 
 ## What this project does and can be used for..
 1. **Value Proposition**
