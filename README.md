@@ -46,7 +46,7 @@
 Clone the project and build it with Cargo:
 
 ```
-git clone https://github.com/username/machine-learning-operations.git
+git clone https://github.com/dewasahu2003/machine-learning-operations.git
 cd machine-learning-operations
 ```
 
